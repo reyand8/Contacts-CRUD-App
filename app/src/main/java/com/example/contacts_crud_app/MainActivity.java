@@ -3,7 +3,6 @@ package com.example.contacts_crud_app;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -32,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -60,15 +58,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        Log.d("One!", String.valueOf(requestCode));
-        Log.d("One!", String.valueOf(REQUEST_CODE_EDIT));
-        Log.d("One!", String.valueOf(resultCode));
-        Log.d("One!", String.valueOf(Activity.RESULT_OK));
-        Log.d("One!", String.valueOf(data));
         if (requestCode == REQUEST_CODE_EDIT && resultCode == Activity.RESULT_OK && data != null) {
             boolean isUpdated = data.getBooleanExtra("isUpdated", false);
             boolean isAdded = data.getBooleanExtra("isAdded", false);
-
             if (isUpdated || isAdded) {
                 contactsViewModel.fetchContacts();
             }
