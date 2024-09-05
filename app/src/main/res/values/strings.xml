@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">Contacts-CRUD-App</string>
+
+    <string name="contact_firstName_label">Name:</string>
+    <string name="contact_lastName_label">Surname:</string>
+    <string name="contact_email_label">Email:</string>
+    <string name="contact_firstName">User</string>
+    <string name="contact_lastName">Useruser</string>
+    <string name="contact_email">user@user.com</string>
+    <string name="edit_btn">Edit</string>
+    <string name="delete_btn">Delete</string>
+
+    <string name="add_firstName">Name</string>
+    <string name="add_lastName">Surname</string>
+    <string name="add_email">Email</string>
+    <string name="add_image">Image link</string>
+
+    <string name="edit_cancel">Cancel</string>
+    <string name="edit_save">Save</string>
 </resources>
